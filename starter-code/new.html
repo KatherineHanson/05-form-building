@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
+    <!-- NOTE Ignore the following Note: -->
     <!-- NOTE (stretch goal): To fully incorporate the highlighting library "hljs" we need to fill the empty link tag below to refer to a CSS file that will handle our text highlighting -->
     <link>
     <!-- DONE: We want our new article form to be able to display a preview of the article that is being entered. Thus, we need code here that will recreate the same structure of our other articles. What do you think we need to add here? -->
@@ -103,13 +104,15 @@
         </fieldset>
       </section>
 
-      <section id="articles" class="tab-content">
+      <section id="preview" class="tab-content">
         <!-- NOTE: This is where we will display our article preview -->
       </section>
 
       <section id="article-export">
-        <!-- TODO: Refer to the preview image to see what we will be building here: we need a container of some kind to hold a JSON export of our article. Ideally this container would show only a incipit (short preview) of the JSON and also be clickable to allow easy selection of the text it holds. What kind of element could we use for this? -->
-        <label>
+        <!-- DONE: Refer to the preview image to see what we will be building here: we need a container of some kind to hold a JSON export of our article. Ideally this container would show only a incipit (short preview) of the JSON and also be clickable to allow easy selection of the text it holds. What kind of element could we use for this? -->
+        <label id="export-field">
+          After creating full post, click to select JSON for full post
+          <input type="text" id="article-json" readonly>
         </label>
       </section>
 
