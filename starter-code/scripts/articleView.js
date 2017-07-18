@@ -97,10 +97,11 @@ articleView.initNewArticlePage = function() {
 articleView.create = function() {
   // DONE: Set up a var to hold the new article we are creating.
   // Clear out the #articles element, so we can put in the updated preview
+  var newArticle;
   $('#preview').empty();
 
   // DONE: Instantiate an article based on what's in the form fields:
-  var newArticle = new Article({
+  newArticle = new Article({
     author: $('#article-author').val(),
     authorUrl: $('#article-author-url').val(),
     title: $('#article-title').val(),
@@ -113,7 +114,7 @@ articleView.create = function() {
   var newHTML = newArticle.toHtml();
   $('#preview').append(newHTML);
 
-  // TODO: The new articles we create will be shown as JSON in an element in our article-export section. From there, we can copy/paste the JSON into our source data file.
+  // DONE: The new articles we create will be shown as JSON in an element in our article-export section. From there, we can copy/paste the JSON into our source data file.
     // Set up this "export" functionality. When data is inputted into the form, that data should be converted to stringified JSON. Then, display that JSON in the element inside the article-export section. The article-export section was hidden on page load; make sure to show it as soon as data is entered in the form.
   $('#article-export').show();
   $('#article-json').val(JSON.stringify(newArticle));
